@@ -6,6 +6,7 @@ import java.util.Scanner;
  * 根据三角形应用的实际需要，分析设置的3个角度的合理性
  * 根据三角形计算面积应用的实际需要，分析设置的3个边长的合理性
  * 设计异常类，并对异常进行处理
+ * 三角形三边：两边之和大于第三边，两边之差小于第三边
  */
 public class Test05 {
     public static void main(String[] args) {
@@ -46,9 +47,10 @@ class RaiseException{
                                             double sideLength3) throws mException
     {
         if(sideLength1+sideLength2<=sideLength3 || sideLength1+sideLength3<=sideLength2
-                || sideLength2+sideLength3<=sideLength1)
+                || sideLength2+sideLength3<=sideLength1 || sideLength1-sideLength2>=sideLength3
+                || sideLength1-sideLength3>=sideLength2 || sideLength2-sideLength3>=sideLength1)
         {
-            throw new mException("两边之和不大于第三边 错误！");
+            throw new mException("三角形三边不满足条件 错误！");
         }
     }
     public static void raiseExceptionOfangle(double innerAngle1, double innerAngle2,

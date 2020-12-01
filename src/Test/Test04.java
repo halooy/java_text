@@ -17,7 +17,7 @@ public class Test04 {
         Sector sector = new Sector();
         System.out.println("********图形如下********");
         System.out.println("1：直线\t\t\t 2：矩形");
-        System.out.println("3：扇形\t\t\t 2：圆");
+        System.out.println("3：扇形\t\t\t 4：圆");
         boolean flag = true;
         while(flag)
         {
@@ -43,14 +43,6 @@ public class Test04 {
                     rec.parameter(x, y, width, high);
                     break;
                 case 3:
-                    cir.name();
-                    System.out.println("请输入一点坐标以及圆的半径：");
-                    double x3 = input.nextDouble();
-                    double y3 = input.nextDouble();
-                    double r = input.nextDouble();
-                    cir.parameter(x3, y3, r);
-                    break;
-                case 4:
                     sector.name();
                     System.out.println("请输入一点坐标以及扇形的半径和角度：");
                     double x4 = input.nextDouble();
@@ -58,6 +50,14 @@ public class Test04 {
                     double r4 = input.nextDouble();
                     double angle = input.nextDouble();
                     sector.parameter(x4, y4, r4, angle);
+                    break;
+                case 4:
+                    cir.name();
+                    System.out.println("请输入一点坐标以及圆的半径：");
+                    double x3 = input.nextDouble();
+                    double y3 = input.nextDouble();
+                    double r = input.nextDouble();
+                    cir.parameter(x3, y3, r);
                     break;
             }
             System.out.println("绘制结束！");

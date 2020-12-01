@@ -3,7 +3,7 @@ package Test;
 import java.util.Scanner;
 
 /**
- * 定义船的序号、名称、价格、载人量、载重量、车型
+ * 定义船的序号、名称、价格、载人量、载重量、船型
  *
  */
 public class Test03 {
@@ -17,8 +17,8 @@ public class Test03 {
         Scanner input = new Scanner(System.in);
         int shipOfID = 0;                                   //序号
         double sumprice = 0;                                //消费钱数
-        int shipOfPeople = 0;                                //载人量
-        int shipOfWeight = 0;                                        //载货量
+        int shipOfPeople = 0;                               //载人量
+        int shipOfWeight = 0;                               //载货量
         int count = 0;
         String namesOfPassengerShip = "";
         String namesOfCruiseShip = "";
@@ -122,11 +122,6 @@ class passengerShip extends Ships
     public passengerShip(int id, String name, double price, int people,int weight, int type)
     {
         super(id,name,price,people,weight,type);
-//        this.id = id;
-//        this.name = name;
-//        this.price = price;
-//        this.people = people;
-//        this.type = type;
     }
     public void show(){
         System.out.println(id+"\t"+name+"\t"+price+"元/天  "+"\t载人:"+people+"人");
